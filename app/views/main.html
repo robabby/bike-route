@@ -3,22 +3,28 @@
 
   <form role="form" ng-submit="addTodo()">
     <div class="row">
-      <div class="input-group">
-        <input type="text" class="form-control" ng-model="todo" placeholder="What needs to be done?" />
-        <span class="input-group-btn">
-          <input type="submit" class="btn btn-primary" value="Add" />
-        </span>
+      <div class="col-md-12">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="todo" placeholder="What needs to be done?" />
+          <span class="input-group-btn">
+            <input type="submit" class="btn btn-primary" value="Add" />
+          </span>
+        </div>
       </div>
     </div>
   </form>
   <br />
   <div class="row">
     <div class="col-md-12" ui-sortable ng-model="todos">
-        <div class="input-group" ng-repeat="todo in todos" style="padding:5px 10px; cursor: move;">
+        
+        <div class="input-group" ng-repeat="todo in todos" style="padding:10px 5px; cursor: move;">
           <input type="text" ng-model="todo" class="form-control" />
-          <span class="input-group-btn">
+          <div class="input-group-btn">
             <button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button>
-          </span>
+          </div>
         </div><!-- /input-group -->
+
     </div>
   </div>
+</div>
+{{$location.path()}}

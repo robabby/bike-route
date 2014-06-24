@@ -35,4 +35,8 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function($rootScope, $location) {
+    $rootScope.location = $location;
+    console.log($location);
   });
