@@ -45,8 +45,12 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/styles/css/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
+      },
+      recess: {
+        files: ['<%= yeoman.app %>/styles/less/{,*/}*.less'],
+        tasks: ['recess:dist']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -60,6 +64,17 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
+      }
+    },
+
+    recess: {
+      dist: {
+        options: {
+          compile: true
+        },
+        files: {
+          '<%= yeoman.app %>/styles/css/style.css': ['<%= yeoman.app %>/styles/less/{,*/}*.less']
+        }
       }
     },
 
@@ -370,7 +385,8 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
-      'watch'
+      'watch',
+      'recess'
     ]);
   });
 

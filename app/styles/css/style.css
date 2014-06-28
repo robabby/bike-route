@@ -1,0 +1,15 @@
+/* Space out content a bit */
+
+.header {
+  position: relative;
+  z-index: 9999;
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.angular-google-map-container {
+  height: 400px;
+}
