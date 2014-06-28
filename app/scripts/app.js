@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.sortable',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'google-maps'
   ])
   .config(['localStorageServiceProvider', function(localStorageServiceProvider) {
     localStorageServiceProvider.setPrefix('ls');
@@ -38,5 +39,4 @@ angular
   })
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
-    console.log($location);
   });

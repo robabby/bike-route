@@ -22,11 +22,13 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="row header">
-        <ul class="nav nav-pills pull-right">
-          <li ng-class="{active:location.path() == '/'}"><a ng-href="#">Home</a></li>
-          <li ng-class="{active:location.path() == '/about'}"><a ng-href="#/about">About</a></li>
-        </ul>
+      <div class="row">
+        <div class="header">
+          <ul id="nav" class="nav nav-pills pull-right">
+            <li ng-class="{active:location.path() == '/'}"><a ng-href="#">Home</a></li>
+            <li ng-class="{active:location.path() == '/about'}"><a ng-href="#/about">About</a></li>
+          </ul>
+        </div>
       </div>
       <div ng-view=""></div>
     </div>
@@ -47,6 +49,8 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFtiZPliypwop5Kdc5M2ZI6q35qOpqBjg"></script>
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -61,6 +65,8 @@
     <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
     <script src="bower_components/angular-ui-sortable/sortable.js"></script>
     <script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

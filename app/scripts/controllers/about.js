@@ -14,4 +14,11 @@ angular.module('mytodoApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.map = {
+	    center: {
+	        latitude: 45,
+	        longitude: -73
+	    },
+	    zoom: 8
+	};
   });
