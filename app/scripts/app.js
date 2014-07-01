@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('mytodoApp', [
+  .module('bikeRouteApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

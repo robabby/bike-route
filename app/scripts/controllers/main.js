@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the mytodoApp
  */
-angular.module('mytodoApp')
+angular.module('bikeRouteApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
     var routesInStore = localStorageService.get('routes');
 

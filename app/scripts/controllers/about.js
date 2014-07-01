@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the mytodoApp
  */
-angular.module('mytodoApp')
+angular.module('bikeRouteApp')
   .controller('AboutCtrl', function ($scope, geolocation) {
   	$scope.lat = "0";
     $scope.lng = "0";
