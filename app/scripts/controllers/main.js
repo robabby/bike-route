@@ -9,19 +9,19 @@
  */
 angular.module('mytodoApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
-    var todosInStore = localStorageService.get('todos');
+    var routesInStore = localStorageService.get('routes');
 
-    $scope.todos = todosInStore && todosInStore.split('\n') || [];
+    $scope.routes = routesInStore && routesInStore.split('\n') || [];
     
-    $scope.$watch('todos', function() {
-    	localStorageService.add('todos', $scope.todos.join('\n'));
+    $scope.$watch('routes', function() {
+    	localStorageService.add('routes', $scope.routes.join('\n'));
     }, true);
 
-    $scope.addTodo = function() {
-    	$scope.todos.push($scope.todo);
-    	$scope.todo = '';
+    $scope.addRoute = function() {
+    	$scope.routes.push($scope.route);
+    	$scope.route = '';
     };
-    $scope.removeTodo = function(index) {
-    	$scope.todos.splice(index, 1);
+    $scope.removeRoute = function(index) {
+    	$scope.routes.splice(index, 1);
     };
   });
