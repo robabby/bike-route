@@ -1,3 +1,4 @@
-<google-map center="map.center" zoom="map.zoom"></google-map>
-
-<a ng-click="centerOnMe()" class="btn btn-primary">Find Me</a>
+<div class="row">
+	<div id="map_canvas" ui-map="model.myMap" class="map" ui-options="mapOptions"></div>
+    <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"></div>
+</div>

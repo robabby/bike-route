@@ -10,6 +10,6 @@
   box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
-.angular-google-map-container {
+#map_canvas {
   height: 400px;
 }

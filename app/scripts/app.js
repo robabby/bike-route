@@ -19,7 +19,8 @@ angular
     'ui.sortable',
     'LocalStorageModule',
     'geolocation',
-    'ui.map'
+    'ui.map',
+    'ui.event'
   ])
   .config(['localStorageServiceProvider', function(localStorageServiceProvider) {
     localStorageServiceProvider.setPrefix('ls');
