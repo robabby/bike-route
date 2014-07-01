@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'ui.sortable',
     'LocalStorageModule',
-    'google-maps'
+    'geolocation',
+    'ui.map'
   ])
   .config(['localStorageServiceProvider', function(localStorageServiceProvider) {
     localStorageServiceProvider.setPrefix('ls');
