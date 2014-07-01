@@ -38,8 +38,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .run(function($rootScope, $location) {
-    // used to determine location app wide
-    $rootScope.location = $location;
   });
