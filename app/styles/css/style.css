@@ -14,6 +14,22 @@ body {
   box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
+#drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: block;
+  width: 300px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 20px 3px rgba(0, 0, 0, 0.15);
+}
+
+#drawer ul li {
+  display: block;
+  padding: 10px;
+}
+
 .map {
   position: absolute;
   top: 0;

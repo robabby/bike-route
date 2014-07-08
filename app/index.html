@@ -21,17 +21,22 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="header clearfix">
-          <ul id="nav" class="nav nav-pills pull-right">
+    <header>
+      <div class="header">
+        
+      </div>
+    </header>
+    <div id="drawer">
+      <div class="scroll">
+        <nav>
+          <ul id="nav" class="nav">
             <li ng-class="{active:location.path() == '/'}"><a ng-href="#">Home</a></li>
             <li ng-class="{active:location.path() == '/map'}"><a ng-href="#/map">Map</a></li>
           </ul>
-        </div>
-      </div><!-- .col-md-12 -->
-    </div><!-- .row -->
-    <div ng-view=""></div>
+        </nav>
+      </div>
+    </div>
+    <div id="wrapper" ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

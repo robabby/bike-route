@@ -1,13 +1,12 @@
 <div class="container">
   <h2>My Routes</h2>
-
   <form role="form" ng-submit="addRoute()">
     <div class="row">
       <div class="col-md-12">
         <div class="input-group">
-          <input type="text" class="form-control" ng-model="route" placeholder="What needs to be done?" />
+          <input type="text" class="form-control input-lg" ng-model="route" placeholder="Create a new route" />
           <span class="input-group-btn">
-            <input type="submit" class="btn btn-primary" value="Add" />
+            <input type="submit" class="btn btn-primary btn-lg" value="Add" />
           </span>
         </div>
       </div>
@@ -16,15 +15,12 @@
   <br />
   <div class="row">
     <div class="col-md-12" ui-sortable ng-model="routes">
-        
-        <div class="input-group" ng-repeat="route in routes" style="padding:10px 5px; cursor: move;">
-          <input type="text" ng-model="route" class="form-control" />
-          <div class="input-group-btn">
-            <button class="btn btn-danger" ng-click="removeRoute($index)" aria-label="Remove">X</button>
-          </div>
-        </div><!-- /input-group -->
-
+      <div class="input-group" ng-repeat="route in routes" style="padding:10px 5px; cursor: move;">
+        <input type="text" ng-model="route" class="form-control" />
+        <div class="input-group-btn">
+          <button class="btn btn-danger" ng-click="removeRoute($index)" aria-label="Remove">X</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-{{$location.path()}}
