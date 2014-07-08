@@ -21,20 +21,21 @@ html, body {
 #drawer-toggle { 
 	position: absolute; 
 	opacity: 0;
-} 
 
-#drawer-toggle:checked ~ #drawer-toggle-label, 
-#drawer-toggle:checked ~ .header { 
-	left: 300px; 
-} 
+	&:checked ~ #drawer-toggle-label, 
+	&:checked ~ .header { 
+		left: 300px; 
+	} 
 
-#drawer-toggle:checked ~ #drawer { 
-	left: 0px; 
-} 
+	&:checked ~ #drawer { 
+		left: 0px; 
+	} 
 
-#drawer-toggle:checked ~ #page-wrap { 
-	left: 300px; 
-}
+	&:checked ~ #page-wrap { 
+		left: 300px; 
+	}
+
+} 
 #drawer-toggle-label { 
 	-webkit-touch-callout: none; 
 	-webkit-user-select: none; 
@@ -70,7 +71,7 @@ html, body {
 	width:300px;
 	padding: 10px;
 	background-color: rgb(255, 255, 255);
-	box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, .15);
+	box-shadow:inset 0px 0px 20px 3px rgba(0, 0, 0, .15);
 	-webkit-overflow-scrolling: touch;
 	z-index: 9999;
 
