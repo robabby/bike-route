@@ -11,6 +11,8 @@ angular.module('bikeRouteApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
     var routesInStore = localStorageService.get('routes');
 
+    $scope.pageClass = 'page-home';
+    
     $scope.routes = routesInStore && routesInStore.split('\n') || [];
     
     $scope.$watch('routes', function() {

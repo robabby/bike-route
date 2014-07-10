@@ -15,6 +15,7 @@ angular.module('bikeRouteApp')
     $scope.error = "";
     $scope.model = { myMap: undefined };
     $scope.myMarkers = [];
+    $scope.pageClass = 'page-map';
 
     $scope.showResult = function () {
         return $scope.error == "";

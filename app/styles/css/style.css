@@ -164,7 +164,7 @@ body {
   transform: translateX(300px);
 }
 
-.map {
+.page-map .map {
   position: absolute;
   top: 0;
   right: 0;
