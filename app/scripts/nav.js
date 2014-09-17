@@ -1,16 +1,16 @@
 (function(w, $) {
 	var $navToggle = $('.nav-toggle'),
-		$drawer = $('#drawer'),
-		$pageWrap = $('#page-wrap'),
-		$header = $('.header')
-		drawerOpen = false;
+			$drawer = $('#drawer'),
+			$pageWrap = $('#page-wrap'),
+			$header = $('.header')
+			drawerOpen = false;
 
 	$navToggle.on('click', animatePage);
 
 	function animatePage() {
 		if(!drawerOpen) {
-			drawerOpen = true;	
-		
+			drawerOpen = true;
+
 			$navToggle.addClass('open');
 			$drawer.addClass('open');
 			$header.addClass('open');
@@ -18,7 +18,7 @@
 
 		} else {
 			drawerOpen = false;
-		
+
 			$navToggle.removeClass('open');
 			$drawer.removeClass('open');
 			$header.removeClass('open');
