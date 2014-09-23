@@ -1,14 +1,21 @@
 'use strict';
 
 module.exports = function(grunt) {
-  grunt.registerTask('grunt-timestamp', function() {
+
+  grunt.registerTask('timestamp', function() {
     var options = this.options({
-      file: '.timestamp'
+      file: 'dist/.timestamp'
     });
     var timestamp = +new Date();
     var contents = timestamp.toString();
     grunt.file.write(options.file, contents);
   });
 
-  grunt.loadNpmTasks('grunt-timestamp');
+  grunt.config.set('timestamp', {
+    options: {
+      file: '.timestamp'
+    }
+  });
+
+  grunt.loadNpmTasks('timestamp');
 };
