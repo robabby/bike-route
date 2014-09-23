@@ -417,7 +417,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'timestamp'
   ]);
 
   grunt.registerTask('default', [
