@@ -4,10 +4,9 @@ describe('Main Angular Scope: ', function() {
 
 	beforeEach(module('mytodoApp'));
 
-	var $scope,
-		$location,
-		$rootScope,
-		$httpBackend;
+	var $location,
+			$rootScope,
+			$httpBackend;
 
 	beforeEach(inject(function ($injector) {
 	    $location = $injector.get('$location');
@@ -19,5 +18,5 @@ describe('Main Angular Scope: ', function() {
 		$location.path('/');
 		expect($location.path()).toBe('/');
 	});
-	
+
 });

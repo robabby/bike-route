@@ -8,18 +8,18 @@
  * Controller of the mytodoApp
  */
 angular.module('bikeRouteApp')
-  .controller('MapCtrl', function ($scope, geolocation) {
-  	$scope.lat = "0";
-    $scope.lng = "0";
-    $scope.accuracy = "0";
-    $scope.error = "";
+  .controller('MapCtrl', function ($scope) {
+  	$scope.lat = '0';
+    $scope.lng = '0';
+    $scope.accuracy = '0';
+    $scope.error = '';
     $scope.model = { myMap: undefined };
     $scope.myMarkers = [];
     $scope.pageClass = 'page-map';
 
     $scope.showResult = function () {
-        return $scope.error == "";
-    }
+        return $scope.error === '';
+    };
 
     $scope.mapOptions = {
         center: new google.maps.LatLng($scope.lat, $scope.lng),
@@ -36,34 +36,34 @@ angular.module('bikeRouteApp')
         var latlng = new google.maps.LatLng($scope.lat, $scope.lng);
         $scope.model.myMap.setCenter(latlng);
         $scope.myMarkers.push(new google.maps.Marker({ map: $scope.model.myMap, position: latlng }));
-    }
+    };
 
     $scope.showError = function (error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                $scope.error = "User denied the request for Geolocation."
+                $scope.error = 'User denied the request for Geolocation.';
                 break;
             case error.POSITION_UNAVAILABLE:
-                $scope.error = "Location information is unavailable."
+                $scope.error = 'Location information is unavailable.';
                 break;
             case error.TIMEOUT:
-                $scope.error = "The request to get user location timed out."
+                $scope.error = 'The request to get user location timed out.';
                 break;
             case error.UNKNOWN_ERROR:
-                $scope.error = "An unknown error occurred."
+                $scope.error = 'An unknown error occurred.';
                 break;
         }
         $scope.$apply();
-    }
+    };
 
     $scope.getLocation = function () {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition($scope.showPosition, $scope.showError);
         }
         else {
-            $scope.error = "Geolocation is not supported by this browser.";
+            $scope.error = 'Geolocation is not supported by this browser.';
         }
-    }
+    };
 
     $scope.getLocation();
 });

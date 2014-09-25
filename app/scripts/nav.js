@@ -1,12 +1,14 @@
 (function(w, $) {
+	'use strict';
+
 	var $navToggle = $('.nav-toggle'),
 			$drawer = $('#drawer'),
 			$pageWrap = $('#page-wrap'),
-			$header = $('.header')
+			$header = $('.header'),
 			drawerOpen = false;
 
-	$navToggle.on('click', animatePage);
-
+	/* This function handles the action of
+		animating out the navigation drawer panel */
 	function animatePage() {
 		if(!drawerOpen) {
 			drawerOpen = true;
@@ -25,4 +27,7 @@
 			$pageWrap.removeClass('open');
 		}
 	}
+
+	$navToggle.on('click', animatePage);
+
 })(window, window.jQuery);
